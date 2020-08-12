@@ -16,4 +16,13 @@ export const MonsterCardContainer = styled.div `
     &:hover {
         transform: scale(1.05);
     }
+
+    @media screen and (max-width:1024px) {
+       padding:100px;
+    }
+
+    @media screen and (max-width:450px) {
+       padding:70px;
+       display:inline-block;
+    }
 `;

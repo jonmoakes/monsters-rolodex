@@ -26,15 +26,14 @@ class App extends React.Component {
   }
 
   render() {
-    const { monsters, searchField } = this.state; // destructure from the state - use the same names. Set them to constants.
+    const { monsters, searchField } = this.state; 
     const filteredMonsters = monsters.filter(monster => 
-      monster.name.toLowerCase().includes(searchField.toLowerCase())  // create a new variable that gets the monsters state and filters over it ( which gets a new array ) and checks to see if an individual monster name contains what the searchfierld includes when typed. tolowercase in case user uses capitals.
+      monster.name.toLowerCase().includes(searchField.toLowerCase())  
       )
     return (
-      <div className="App">
+      <div style={{textAlign:"center", width:"100%"}}>
         <h1>Monsters Rolodex</h1>
         <SearchBox 
-          // giving the searchbox component itself ( the component file ) 2 props called placeholder and handleChange and giving them values or functions etc. These can then be used in the searchbox component.jsx file itself where we would destructure them.
           placeholder='search monsters'  
           handleChange={this.handleChange}
         />
